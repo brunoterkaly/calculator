@@ -11,8 +11,7 @@ exports.calculate = function(req, res) {
   });
 
   var operations = {
-    // add appears to be wrong. Let's fix it.
-    'add':      function(a,b) { return a + b },
+    'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
