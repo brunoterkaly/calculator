@@ -12,7 +12,8 @@ exports.calculate = function(req, res) {
 
   var operations = {
     // 'add' looks like it has extra plus signs. So they were removed.
-    'add':      function(a,b) { return a + b },
+    //  Used parseFloat() as a fix.
+    'add':      function(a,b) { return parseFloat(a) + parseFloat(b) },
     'subtract': function(a,b) { return a - b },
     'multiply': function(a,b) { return a * b },
     'divide':   function(a,b) { return a / b },
